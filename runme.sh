@@ -18,6 +18,7 @@ fi
 #Check to see if we need to create some directories
 checkIfDirExists adoc
 checkIfDirExists archive
+checkIfDirExists html
 
 echo "Starting the monitoring script"
 bash "bin/monitor-files.sh" &

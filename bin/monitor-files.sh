@@ -15,6 +15,11 @@ while :; do
 		#If whenChangedRunning is empty
 		if [ -z "$whenChangedRunning" ]; then
 			when-changed $file -c "bash asciidoctor-refresh.sh $i" &
+			echo $file
+			#We must sleep a second to trigger when-changed
+			sleep 1
+			#In case the file was just created we want to trigger when-changed immediately
+			touch $file
 		fi
 	done
 	sleep 10

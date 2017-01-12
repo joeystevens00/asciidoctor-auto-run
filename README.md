@@ -3,9 +3,12 @@ asciidoctor-auto-run is a bash script that monitors for changes to [AsciiDoc](ht
 The adoc directory is monitored for new files and changes to existing files. To get started simply create a new AsciiDoc file in the adoc directory with the file extension '.adoc'. Changes after that will generate new HTML files and place them in the specified web directory. Your old adoc files will be archived in the archive directory. 
 
 ## Requirements
-asciidoctor
+asciidoctor  
+
 `apt-get install asciidoctor`
+
 when-changed
+
 `pip install when-changed`
 
 Optionally a webserver

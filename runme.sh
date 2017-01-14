@@ -15,6 +15,14 @@ checkIfDirExists() {
 fi
 }
 
+checkIfInstalled() {
+        command -v $1 >/dev/null 2>&1 || { echo "I require $1 but it's not installed.  Aborting." >&2; exit 1; }
+}
+
+#Check for dependencies 
+checkIfInstalled when-changed
+checkIfInstalled asciidoctor
+
 #Check to see if we need to create some directories
 checkIfDirExists adoc
 checkIfDirExists archive
